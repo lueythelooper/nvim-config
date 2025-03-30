@@ -10,8 +10,5 @@ return require('packer').startup(function(use)
     -- Post-install/update hook with neovim command
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-  use {
-    "rockyzhang24/arctic.nvim",
-    requires = { "rktjmp/lush.nvim" }
-  }
+  use 'Mofiqul/vscode.nvim'
 end)

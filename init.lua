@@ -1,4 +1,4 @@
 print ("LueyTheLooper neovim config")
 require('plugins')
 
-vim.cmd("colorscheme arctic")
+vim.cmd("colorscheme vscode")
