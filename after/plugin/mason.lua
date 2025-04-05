@@ -1,6 +1,7 @@
 require('mason').setup()
 require("mason-lspconfig").setup()
 require("lspconfig").clangd.setup{}
+local lsnip = require("luasnip")
 
 -- Completion setup
 local cmp = require'cmp'
