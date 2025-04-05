@@ -11,3 +11,9 @@ vim.cmd("colorscheme vscode")
 local builtin = require('telescope.builtin')
 vim.keymap.set( "n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+
+-- Set vim options
+vim.opt.tabstop = 3
+vim.opt.shiftwidth = 3
+vim.opt.softtabstop = 3
+vim.opt.expandtab = true
