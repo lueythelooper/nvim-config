@@ -53,8 +53,8 @@ return {
     capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
     -- Example for setting up an LSP server with nvim-cmp capabilities
-    -- require('lspconfig').pyright.setup({
-    --   capabilities = capabilities,
-    -- })
+    require('lspconfig').clangd.setup({
+      capabilities = capabilities,
+    })
   end,
 }
