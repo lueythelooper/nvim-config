@@ -1,19 +1,16 @@
--- Note, setting the mapleader in this lua does not take effect
--- until something is mapped
+-- Set the neovim mapleader
 vim.g.mapleader = " "
 
-print ("LueyTheLooper neovim config")
-require('plugins')
+-- Load all of the lazy configurations. The lazy will be installed per the config in config.lazy
+-- which was taken from the lazy.nvim documentation site
+require("config.lazy")
 
-vim.cmd("colorscheme vscode")
+-- Set the vim colorscheme to vscode, installed in the lazy misc modules configuration
+vim.cmd('colorscheme vscode')
 
--- Map keys
-local builtin = require('telescope.builtin')
-vim.keymap.set( "n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-
--- Set vim options
-vim.opt.tabstop = 3
-vim.opt.shiftwidth = 3
-vim.opt.softtabstop = 3
+-- Set vim options for shiftwidth and tabstop
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.autoindent = true
 vim.opt.expandtab = true
+vim.opt.wrap = false
